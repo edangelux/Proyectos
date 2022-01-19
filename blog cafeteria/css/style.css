@@ -163,19 +163,24 @@ p {
     border-bottom: 1px var(--claro);
     margin-bottom: 2rem;
 }
-.widget-curso:last-of-type {
+.widget-curso:last-of-type,
+.curso:last-of-type {
     border: none;
     margin-bottom: 0; 
 }
-.widget-curso__label {
+.widget-curso__label,
+.curso__label {
     font-family: var(--encabezado);
     font-weight: bold;
 }
-.widget-curso__info {
+.widget-curso__info,
+.curso__info {
     font-weight: normal;
 }
 .widget-curso__label,
-.widget-curso__info {
+.widget-curso__info,
+.curso__info,
+.curso__label {
     font-size: 2rem;
 }
 
@@ -210,3 +215,18 @@ p {
     }
 }
 
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1rem solid var(--claro);
+}
+@media (min-width: 768px) {
+    .curso {
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.curso:last-of-type {
+    border: none;
+}
