@@ -48,7 +48,10 @@
 
             <article class="entrada">
                 <div class="entrada_imagen">
-                    <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    <picture> <!-- funciona para añadir un formato mas ligero como puede ser webp pero no todos los navegadores lo soporta -->
+                        <source srcset="img/blog1.webp" type="image/webp"> <!-- la consulta es que si el navegador puede abrir este formato lo abra o sino sera con el jpg -->
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
                 </div>
                 <div class="entrada_contenido">
                     <h4 class="no-margin">Tipo de granos de café</h4>
@@ -59,7 +62,10 @@
 
             <article class="entrada">
                 <div class="entrada_imagen">
-                    <img loading="lazy"  src="img/blog2.jpg" alt="imagen blog">
+                    <picture> <!-- funciona para añadir un formato mas ligero como puede ser webp pero no todos los navegadores lo soporta -->
+                        <source srcset="img/blog2.webp" type="image/webp"> <!-- la consulta es que si el navegador puede abrir este formato lo abra o sino sera con el jpg -->
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture>
                 </div>
                 <div class="entrada_contenido">
                     <h4 class="no-margin">3 deliciosas recetas de café</h4>
@@ -70,7 +76,10 @@
 
             <article class="entrada">
                 <div class="entrada_imagen">
-                    <img loading="lazy"  src="img/blog3.jpg" alt="imagen blog">
+                    <picture> <!-- funciona para añadir un formato mas ligero como puede ser webp pero no todos los navegadores lo soporta -->
+                        <source srcset="img/blog3.webp" type="image/webp"> <!-- la consulta es que si el navegador puede abrir este formato lo abra o sino sera con el jpg -->
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture>
                 </div>
                 <div class="entrada_contenido">
                     <h4 class="no-margin"> Beneficios del café </h4>
