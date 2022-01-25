@@ -38,10 +38,10 @@ alert(" el resultado de la operacion es: "+operacion); /* aca mostraria en un al
 /* tipos de datos */
 var number = 10; /* valor numerico puede ser entero o decimal */
 var string = "a"; /* cadena de texto para ingresar texto que representan un valor*/
-var boolean = true  false /* es un valor logico que sus valores son verdadero o falso para hacer condiciones */
-var null /* denota valor nulo */
+var boolean = true  //false /* es un valor logico que sus valores son verdadero o falso para hacer condiciones */
+var //null /* denota valor nulo */
 var undefined /* es decir un valor sin definir  */
 var symbol /* cuyos datos son unicos o inmutables */
-var object {} /* puede contener mas variables en su interior */
+var object //{} /* puede contener mas variables en su interior */
 
-console.log(typeof number); /* typeof en la consola demostrara que tipo de dato esta hecha la variable */
+    console.log(typeof number); /* typeof en la consola demostrara que tipo de dato esta hecha la variable */
