@@ -54,3 +54,27 @@ if (year == 2008 || year == 2018)
 else {
     console.log("año no registrado");
 }
+
+/* switch = condicional que permite hacer multiples operaciones y tomar decisiones enn funcion de distintos estados de las variables, evalua una expresion comparando el valor de esa expresion con una instancia case, y ejecuta declaraciones asociadas a ese case asi como las declaraciones en los case que siguen */
+
+var edad = 18;
+var imprime = "";
+
+switch(edad)
+{
+    case 18:
+        imprime = "acabas de cumplir la mayoria de edad";
+    break;
+    case 25:
+        imprime = "ya eres adulto";
+    break;
+    case 40:
+        imprime = "crisis de los cuarenta"
+    break;
+
+    default:
+        imprime ="no tienes edad";
+    break;
+}
+
+console.log(imprime);
