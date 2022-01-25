@@ -62,17 +62,17 @@ var imprime = "";
 
 switch(edad)
 {
-    case 18:
+    case 18: /* sentencia a ejecutar si la expresion tiene el valor 18 */
         imprime = "acabas de cumplir la mayoria de edad";
     break;
-    case 25:
+    case 25: /* sentencia a ejecutar si la expresion tiene el valor 25 */
         imprime = "ya eres adulto";
     break;
-    case 40:
+    case 40: /* sentencia a ejecutar si la expresion tiene el valor 40 */
         imprime = "crisis de los cuarenta"
     break;
 
-    default:
+    default: /* sentencia a ejecutar si el valor no es ninguno de los anteriores */
         imprime ="no tienes edad";
     break;
 }
