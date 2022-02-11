@@ -1,5 +1,8 @@
+/* javascript es tipo dinamico */
 /* haremos y aprendaremos sobre varibales js */
 /* una variable es un contenedor de informacion */
+
+/* var nombre = valor */
 
 var país = "Nicaragua"; /* los string en las variables van entre comillas dobles o simples */
 var continente = "Americano" /* esto seria un string igual que el anterior */
