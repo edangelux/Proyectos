@@ -45,3 +45,12 @@ var symbol /* cuyos datos son unicos o inmutables */
 var object //{} /* puede contener mas variables en su interior */
 
     console.log(typeof number); /* typeof en la consola demostrara que tipo de dato esta hecha la variable */
+
+    // booleano
+    // valores de verdadero o falso    
+const boolean1 = true;
+const boolean2 = false;
+ const boolean3 = "true"; /* aqui este lo tomara como un string puedes comprobar con un typeof  */
+
+ console.log(boolean1);
+ console.log(boolean2);
