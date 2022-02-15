@@ -114,3 +114,25 @@ object.freeze(producto1); /*  es una manera de decir de congelar el objeto y no 
 console.log(object.isfrozen(producto1)); /* se supone que en esta syntaxis es una verificacion de saber si el objeto esta congelado */
 
 object.seal(producto1) /* este no te permite agregar ni eliminar pero si modificar los objetos en freeze nada se puede hacer */
+
+// unir dos objetos spread operator
+
+//primero que todo creamos dos objetos
+
+const producto2 = {
+    nombre: "tablet",
+    precio: 300,
+    disponible: true
+}
+
+const medidas = {
+    peso: '1kg',
+    medidas: '1m'
+}
+
+/* la buena practica dice que no debemos de modificar los originales en javascript se agrego rest operator, que se llama o usa con los 3 puntos seguido al que agregamos y luego lo mismo con el siguiente en la syntaxis de abajo */
+
+const nuevo = {...producto2,...medidas};
+
+console.log(producto2)
+console.log(nuevo)
