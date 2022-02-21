@@ -35,3 +35,55 @@ console.table(numeros);
 /* ya que es mejor no cambiar los datos originales del arrays lo mas eficiente seria copiarlo y ahi codificarlo */
 
 const nuevo = [...numeros, '100']; /* aqui copiamos el arrays y luego de ello agregamos 100 */
+
+
+
+/* array multidimencional */
+/* array methods */
+
+
+//esto es un  arreglo de objetos
+const carrito = [
+    {Nombre: 'monitor', precio: 500},
+    {Nombre: 'television', precio: 700},
+    {Nombre: 'tablet', precio: 300},
+    {Nombre: 'audifonos', precio: 200},
+    {Nombre: 'teclado', precio: 50},
+    {Nombre: 'celular', precio: 500},
+    {Nombre: 'bocinas', precio: 300},
+    {Nombre: 'laptop', precio: 800},
+];
+
+//includes
+
+/* se supone que el codigo de aqui es uno de los tantos metodos para encontrar un resultado de un arreglo
+pero les dara mal por que esto es para un arreglo normal, nosotros tenemos un arreglo de objetos entonces no funcionara existe otro metodo */
+const resultado = carrito.includes('celular');
+
+//some ideal para arreglo de objetos
+/* tienes que acceder a cada propiedad de lo que quieras comprobar para que todo funcione */
+resultado = carrito.some(function(producto){
+    return producto.nombre == 'celular'
+})
+
+//tambien se puede hacer el codigo asi
+resultado = carrito.some(producto => producto.nombre === 'tablet')
+
+//reduce es un metodo que calcula un valor final o anterior 
+resultado = carrito.reduce(function(total, producto) {
+    return total + producto.precio
+}, 0);
+/* lo que aqui hizo fue dar el valor total del carrito de compra de todos los productos */
+//tambien se puede hacer asi
+resultado = carrito.reduce((total, producto) => total + producto.precio, 0);
+
+/* filter
+ es para obtener filtros de datos especificos*/
+resultado = carrito.filter(function(producto) {
+    return producto.precio > 400
+}); //lo que hizo es filtrar solo productos con valor mayor de 400
+
+
+console.log(resultado);
+
+
