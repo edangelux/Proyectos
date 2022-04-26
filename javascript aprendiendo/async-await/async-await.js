@@ -12,10 +12,28 @@ function descargar_clientes () {
     })
 }
 
+function descargar_pedidos () {
+    return new Promise (resolve => {
+        console.log('descargando los pedidos...');
+
+        setTimeout(() => {
+            resolve('los pedidos fueron descargados');
+        }, 3000);
+    });
+}
 async function app() {
-    try {
-        const resultado = await descargar_clientes ();
-        console.log(resultado);
+    try {/* 
+        const clientes = await descargar_clientes ();
+        const pedidos = await descargar_pedidos();
+        console.log(clientes);
+        console.log(pedidos); */
+
+
+         // hacer doble consulta de async await
+        const resultado = await Promise.all([descargar_clientes(), descargar_pedidos() ]);
+        console.log(resultado[0]);
+        console.log(resultado[1]);
+        /* se coloca posicion cero y uno por que estamos en un arreglo y asi se imprime cada uno aparte */
     }
     catch (error) {
         console.log(error);
