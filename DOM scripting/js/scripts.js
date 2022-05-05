@@ -31,3 +31,10 @@ const html = document.createElement('A') //falta agregar los atributos, texto y 
  //osea tomamos esta clase y al tomarla diremos colocate este html
 
  console.log(html)
+
+ //eventos de javascript
+
+ //el add event listener es la funcion para poder iniciar un evento y cuando pase ese evento se va  ahacer todo lo que este dentro, en este caso diremos cuando se cargue toda la pagina haremos esto!
+ window.addEventListener('load', function(){
+     console.log(5)
+ })
