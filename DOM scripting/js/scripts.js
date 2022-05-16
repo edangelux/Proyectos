@@ -38,3 +38,15 @@ const html = document.createElement('A') //falta agregar los atributos, texto y 
  window.addEventListener('load', function(){
      console.log(5)
  })
+
+ // seleccionar elementos y asociarlas en un evento
+
+ const enviar = document.querySelector('.boton--primario'); 
+ enviar.addEventListener('click', function (evento)
+ {
+     console.log('enviando formulario');
+     console.log(evento)
+
+     //valida un formulario de todas las celdas completadas
+     console.log(evento.preventDefault())
+ })
