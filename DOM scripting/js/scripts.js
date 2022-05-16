@@ -50,3 +50,29 @@ const html = document.createElement('A') //falta agregar los atributos, texto y 
      //valida un formulario de todas las celdas completadas
      console.log(evento.preventDefault())
  })
+
+ //eventos de los inputs y textarea
+
+ const datos = {
+     nombre: '',
+     email: '',
+     mensaje: ''
+ }
+
+ const nombre = document.querySelector('#nombre')
+ const email = document.querySelector('#email')
+ const mensaje = document.querySelector('#mensaje')
+
+
+ nombre.addEventListener('input', leer)
+
+ email.addEventListener('input', leer)
+
+ mensaje.addEventListener('input', leer)
+
+ function leer(e){
+     //console.log(e.target.value)
+
+     datos[e.target.id] = e.target.value
+     console.log(datos)
+ }
