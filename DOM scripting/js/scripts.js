@@ -76,3 +76,52 @@ const html = document.createElement('A') //falta agregar los atributos, texto y 
      datos[e.target.id] = e.target.value
      console.log(datos)
  }
+
+ //evento de submit
+
+ const formulario = document.querySelector('.formulario')
+ formulario.addEventListener('submit', function(evento){
+      evento.preventDefault()
+
+ //validar formulario
+const {nombre, email, mensaje} = datos
+
+if (nombre === '' || email === '' || mensaje === '')
+{
+    mostrarerror('todos los campos son obligatorios')
+
+    return; //corta ejecucion de codigo
+}
+
+//crear alerta correctamente
+mostrarmensaje('se envio correctamente')
+
+ //enviar formulario
+      console.log('Enviando formulario')
+ })
+// muestra que se envio
+ function mostrarmensaje(mensaje) {
+     const alerta = document.createElement('p');
+     alerta.textContent = mensaje
+     alerta.classList.add('correcto')
+
+     formulario.appendChild(alerta)
+     //desaparezca
+     setTimeout(() => {
+         alerta.remove()
+     }, 3000);
+ }
+ //muestra error
+
+ function mostrarerror(mensaje) {
+     const error = document.createElement('p')
+     error.textContent = mensaje
+     error.classList.add('correcto')
+
+     formulario.appendChild( alerta )
+
+     //desaparecer 3s
+     setTimeout(() => {
+         error.remove()
+     }, 3000);
+ }
