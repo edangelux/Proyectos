@@ -1,0 +1,26 @@
+{
+  "name": "festival-de-musica",
+  "version": "1.0.0",
+  "description": "festival de musica con SASS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edangelux/Proyectos.git"
+  },
+  "keywords": [
+    "SASS",
+    "GULP"
+  ],
+  "author": "eddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edangelux/Proyectos/issues"
+  },
+  "homepage": "https://github.com/edangelux/Proyectos#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}
