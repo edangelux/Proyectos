@@ -22,5 +22,8 @@
   "homepage": "https://github.com/edangelux/Proyectos#readme",
   "dependencies": {
     "sass": "^1.51.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
