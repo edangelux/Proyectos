@@ -133,7 +133,7 @@ function mostrar(id){
                 tarjeta1.disabled = false;
                 tarjeta2.disabled = false;
                 tarjetasVolteadas = 0;
-            },800);
+            },1000);
 
         }
     }
