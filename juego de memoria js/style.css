@@ -6,8 +6,8 @@ body{
 }
 
 main{
-    border: 1px solid black;
-    margin: 30px auto;
+    width: 730px;
+    margin: 100px auto 50px;
     display: flex;
     align-items:center;
 }
@@ -20,6 +20,8 @@ main{
 
 h1{
     text-align: center;
+    color: rgb(238, 85, 85);
+
 
 }
 
@@ -41,8 +43,24 @@ button:hover{
     border-bottom-right-radius: 20px;
     width: 250px;
     height: 400px;
+    padding: 0 20px;
 }
 
 .estadisticas{
-    border: 1px solid white
+    color: rgb(223, 130, 130);
+    border: 1px solid white;
+    height: 105px;
+    border-radius: 8px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+}
+
+footer{
+    text-align: center;
+    color: rgb(38, 70, 158);
+
+}
+
+a{
+    text-decoration: none;
 }
