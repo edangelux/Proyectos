@@ -20,7 +20,7 @@ main{
 
 h1{
     text-align: center;
-    color: rgb(238, 85, 85);
+    color: #FF5733;
 
 
 }
@@ -29,7 +29,7 @@ button{
     height: 100px;
     width: 100px;
     font-size: 40px;
-    color: black;
+    color: #16A085;
     font-weight: bold;
 }
 
@@ -47,7 +47,8 @@ button:hover{
 }
 
 .estadisticas{
-    color: rgb(223, 130, 130);
+    
+    color: #AF7AC5;
     border: 1px solid white;
     height: 105px;
     border-radius: 8px;
