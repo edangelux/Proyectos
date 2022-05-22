@@ -1,4 +1,48 @@
 body{
     background: rgb(148,187,233);
     background: radial-gradient(circle, rgba(148,187,233,1) 0%, rgba(245,167,201,1) 43%, rgba(166,183,227,1) 47%);
+    font-family: sans-serif;
+    color: white;
+}
+
+main{
+    border: 1px solid black;
+    margin: 30px auto;
+    display: flex;
+    align-items:center;
+}
+
+.primero{
+    background-color: rgba(255,255, 255, 0.2);   
+    padding: 0 10px 10px 10px;
+    border-radius: 20px;
+}
+
+h1{
+    text-align: center;
+
+}
+
+button{
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.segundo{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 250px;
+    height: 400px;
+}
+
+.estadisticas{
+    border: 1px solid white
 }
