@@ -11,6 +11,11 @@ let time = 30;
 let tiempo_inicial = 30
 let detener = null
 
+let winAudio = new Audio('./sounds/ganaste.wav');
+let bienAudio = new Audio('./sounds/buena.wav');
+let malaAudio = new Audio('./sounds/error.wav');
+let perdisteAudio = new Audio('./sounds/perdiste.wav');
+let clickAudio = new Audio('./sounds/click.wav');
 
 
 //accediento al html
@@ -37,6 +42,7 @@ function tiempo(){
         {
             clearInterval(detener);
             bloquearTodo();
+            perdisteAudio.play();
         }
     },1000)
 } 
@@ -48,7 +54,7 @@ function bloquearTodo()
     for(let i = 0; i<= 15; i++)
     {
         let tarjetaDetener = document.getElementById(i);
-        tarjetaDetener.innerHTML = numeros[i];
+        tarjetaDetener.innerHTML = `<img src="./img/${numeros[i]}.png" alt="aqui se mostraria imagen">`;
         tarjetaDetener.disabled = true;
     }
 }
@@ -71,9 +77,10 @@ function mostrar(id){
         //mostrar contenido
         tarjeta1 = document.getElementById(id);
         //darle el contendio al usuario
-        resultado1 =  numeros[id]
-        tarjeta1.innerHTML = resultado1
-    
+        resultado1 =  numeros[id];
+        tarjeta1.innerHTML = `<img src="./img/${resultado1}.png" alt="aqui se mostraria imagen">`;
+        clickAudio.play();
+
         //desahabilitar primera tarjeta para que no aumente el contador
         tarjeta1.disabled = true;
     }
@@ -85,7 +92,8 @@ function mostrar(id){
         resultado2 = numeros[id];
 
         //mostrarle al usuario el contenido
-        tarjeta2.innerHTML = resultado2;
+        tarjeta2.innerHTML = `<img src="./img/${resultado2}.png" alt="aqui se mostraria imagen">`;
+        clickAudio.play();
 
         //desahabilitar segunda tajeta para que no aumente el contador
         tarjeta2.disabled = true;
@@ -103,9 +111,11 @@ function mostrar(id){
             //aumentar aciertos
             aciertos ++;
             mostrarleAciertos.innerHTML =  `Aciertos: ${aciertos}`;
+            bienAudio.play();
 
             if(aciertos == 8)
-            {   clearInterval(detener);
+            {   winAudio.play();
+                clearInterval(detener);
                 mostrarleAciertos.innerHTML = `Aciertos: ${aciertos} 🎉🎊 `
                 mostrarleMovimientos.innerHTML = `Movimientos:  ${movimientos}🤌🏼🥷`
                 //resta el tiempo inicial con el que quedo guardo: 30 - 10 = 20segundos
@@ -115,6 +125,7 @@ function mostrar(id){
         }
         else 
         {
+            malaAudio.play();
             //en caso que no sean iguales vamos a mostrar los contenidos y volver a tapar
             setTimeout(()=>{
                 tarjeta1.innerHTML = ' ';
