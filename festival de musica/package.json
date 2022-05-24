@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/edangelux/Proyectos#readme",
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "sass": "^1.51.0"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0"
   }
 }
