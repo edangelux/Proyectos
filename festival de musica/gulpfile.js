@@ -1,9 +1,11 @@
 const {src, dest, watch } = require("gulp")
 const sass = require("gulp-sass")(require("sass"))
+const plumber = require('gulp-plumber')
 
 function css(callback) 
 {
     src('src/scss/**/*.scss')  //identifica sass
+    .pipe(plumber())
     .pipe(sass())//compila
     .pipe(dest("build/css")) //se guarda en disco
 
