@@ -4,7 +4,7 @@ const sass = require("gulp-sass")(require('sass')); //extraer funcionalidades sa
 //src = buscar dest = almacenar watch = observar cambios
 
 function css (call){
-    src('src/scss/app.scss') //identificar archivo de sass
+    src('src/scss/**/*.scss') //identificar archivo de sass
 
     .pipe(sass()) // compilarlo
 
@@ -14,7 +14,7 @@ function css (call){
 }
 
 function dev (call){ //observar todo tipo de cambios de la hoja y se pasa a la funcion css
-    watch('src/scss/app.scss', css)
+    watch('src/scss/**/*.scss', css)
 
     call();
 }
