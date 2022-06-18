@@ -1,14 +1,16 @@
 const {src, dest, watch} = require("gulp"); //extraer funcionalidades de gulp.file
 const sass = require("gulp-sass")(require('sass')); //extraer funcionalidades sass descargando extension gulp-sass
 
+const plumber = require('gulp-plumber');
 //src = buscar dest = almacenar watch = observar cambios
 
 function css (call){
     src('src/scss/**/*.scss') //identificar archivo de sass
+        .pipe(plumber())// si hay errores no detiene el workflow
 
-    .pipe(sass()) // compilarlo
+        .pipe(sass()) // compilarlo
 
-    .pipe(dest('build/css')); //guardarla
+        .pipe(dest('build/css')); //guardarla
 
     call(); // avisa a gulp cuando llegamos al final
 }
