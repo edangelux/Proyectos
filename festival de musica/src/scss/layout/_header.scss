@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+
+.header {
+    background-color: v.$rosa;
+
+    h1 {
+        color: v.$amarillo
+    }
+
+}
+
+.navegacion-principal{
+    a {
+        color: v.$amarillo;
+        font-size: 2.4rem;
+        
+        &:hover {
+            color: v.$verde
+        }
+
+    }
+}
