@@ -1,0 +1,26 @@
+@use 'variables' as v;
+
+@mixin celular {
+    @media (min-width: v.$celular){
+        @content; //contiene el codigo donde se coloque el mixin
+
+    }
+}
+
+@mixin tablet {
+    @media(min-width: v.$tablet){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: v.$laptop){
+        @content;
+    }
+}
+
+@mixin computadora {
+    @media (min-width: v.$computadora){
+        @content;
+    }
+}
