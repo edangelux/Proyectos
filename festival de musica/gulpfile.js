@@ -9,6 +9,7 @@ const plumber = require('gulp-plumber');
 const cache = require('gulp-cache');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp')
+const avif = require('gulp-avif')
 
 function css (call){
     src('src/scss/**/*.scss') //identificar archivo de sass
@@ -34,6 +35,19 @@ function webpp(call){
 call()
 }
     
+function aviff(call){
+    
+    const opciones = {
+        quality: 50
+    };
+
+    src('src/img/**/*.{png,jpg}')
+    .pipe(aviff(opciones))
+    .pipe(dest('build/img'))
+
+call()
+}
+
 function imagenes(call){
     const opciones = {
         optimizationLevel: 3
@@ -55,4 +69,5 @@ function dev (call){ //observar todo tipo de cambios de la hoja y se pasa a la f
 exports.css = css;
 exports.imagenes = imagenes;
 exports.webpp = webpp;
-exports.dev = parallel(imagenes, webpp, dev);
+exports.aviff = aviff
+exports.dev = parallel(aviff, webpp, imagenes, dev);
