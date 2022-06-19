@@ -60,14 +60,22 @@ function imagenes(call){
     call();
 }
 
+function javascript(call){
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'));
+    call();
+}
+
 function dev (call){ //observar todo tipo de cambios de la hoja y se pasa a la funcion css
-    watch('src/scss/**/*.scss', css)
+    watch('src/scss/**/*.scss', css);
+    watch('src/js/**/*.js', javascript);
 
     call();
 }
 
 exports.css = css;
+exports.js = javascript;
 exports.imagenes = imagenes;
 exports.webpp = webpp;
 exports.aviff = aviff
-exports.dev = parallel(webpp, imagenes, dev);
+exports.dev = parallel(webpp, imagenes, javascript, dev);
