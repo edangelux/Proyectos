@@ -70,4 +70,4 @@ exports.css = css;
 exports.imagenes = imagenes;
 exports.webpp = webpp;
 exports.aviff = aviff
-exports.dev = parallel(aviff, webpp, imagenes, dev);
+exports.dev = parallel(webpp, imagenes, dev);
