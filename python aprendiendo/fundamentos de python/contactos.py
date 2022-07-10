@@ -128,6 +128,9 @@ def mostrar_contacto():
                 print(agenda.rstrip()) #imprimos la agenda de contacto
             print('\n')
 
+    #reiniciar app
+    app()
+
 def buscar_contacto():
     print('Busque el contacto exacto \n')
     nombre = input('Coloque el nombre del contacto que desea buscar: ')
