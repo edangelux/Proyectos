@@ -1,0 +1,293 @@
+:root{
+    --bg-color1: #F9F9E0;
+    --bg-color2: #FFD0D0;
+    --bg-color3: #FF9EAA;
+    --bg-color4: #fce762;
+    --bg-color5: #3AA6B9;
+    --aire-1: #7dce82;
+    --aire-2: #e8e288;
+    --aire-3: #F09359;
+    --aire-4: #ff8360;
+    --aire-5: #FF170B;
+    
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--bg-color1);
+    color: #112A46;
+    font-family: sans-serif;
+    padding: 0 15px;
+}
+hr{
+    margin-bottom: 10px;
+}
+.header{
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    & #city_input{
+        background-color: var(--bg-color2);
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 25px;
+        color: #112A46;
+        &:focus{
+            outline: none;
+        }
+    }
+    & #busquedaBtn{
+        border: none;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 25px;
+        background-color: var(--bg-color4);
+        cursor: pointer;
+    }
+    & #localidadBtn{
+        border: none;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 25px;
+        background-color: var(--bg-color5);
+        cursor: pointer;
+    }
+}
+.carta{
+    background-color: var(--bg-color2);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    & p{
+        font-size: 14px;
+        color:#112A46;
+    }
+    & h2{
+        font-size: 32px;
+        font-weight: 500;
+    }
+}
+.weather-data{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    & .weather-izquierda{
+        grid-column: span 1;
+        & .actual-weather{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & h2{
+                margin: 7px 0;
+            }
+            & p{
+                color: #112A46;
+            }
+        }
+        & .carta-pie{
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        & .pronostico-item{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+            margin-bottom: 15px;
+            & .icon-wrapper{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    & .weather-derecha{
+        grid-column: span 3;
+        & h2{
+            margin-bottom: 10px;
+        }
+        & .destacados{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 15px;
+            & .carta:nth-last-of-type(1),
+            & .carta:nth-last-of-type(2){
+                grid-column: span 2;
+            }
+            & .carta-cabeza{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+            & .calidad-aire{
+                color: #112A46;
+                padding: 5px 10px;
+                border-radius: 15px;
+                &.aire-1{
+                    background-color: var(--aire-1);
+                }
+                &.aire-2{
+                    background-color: var(--aire-2);
+                }
+                &.aire-3{
+                    background-color: var(--aire-3);
+                }
+                &.aire-4{
+                    background-color: var(--aire-4);
+                }
+                &.aire-5{
+                    background-color: var(--aire-5);
+                }
+            }
+            & .indices-aire{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                place-items: center;
+                & p{
+                    text-align: center;
+                }
+            }
+            & .amanecer-anoche{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                & .item{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    & h2{
+                        margin-top: 15px;
+                    }
+                }
+            }
+            & .carta-item{
+                display: flex;
+                justify-content: space-between;
+            }
+        } 
+        & .hora-pronostico{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            column-gap: 10px;
+            & carta{
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media(max-width: 1100px){
+    .weather-data{
+        grid-template-columns: repeat(3, 1fr);
+        & .weather-derecha{
+            grid-column: span 2;
+            & .destacados{
+                grid-template-columns: 3, 1fr;
+                & .card:nth-of-type(1){
+                    grid-column: span 3;
+                }
+            }
+            & .hora-pronostico{
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+    }
+}
+@media(max-width: 1040px){
+    .weather-data{
+        grid-template-columns: repeat(2, 1fr);
+        & .weather-derecha{
+            grid-column: span 1;
+            & .destacados{
+                grid-template-columns: repeat(2, 1fr);
+                & .card.card:nth-of-type(1){
+                    grid-column: span 2;
+                }
+            }
+            & .hora-pronostico{
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+}
+@media(max-width: 992px){
+    .weather-data .weather-derecha .destacados{
+        & .carta{
+            grid-column: span 2;
+        }
+        & .indices-aire{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+@media(max-width: 850px) {
+    .weather-data{
+        grid-template-columns: 1fr;
+        & .weather-derecha .destacados{
+            & .carta.card:nth-of-type(3),
+            & .carta.card:nth-of-type(4),
+            & .carta.card:nth-of-type(5),
+            & .carta.card:nth-of-type(6),
+            & .carta.card:nth-of-type(7){
+                grid-column: span 1;
+            }
+            & .indices-aire{
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    }
+}
+@media(max-width: 660px){
+    .header{
+        flex-direction: column;
+        & h2{
+            margin-bottom: 8px;
+        }
+        & #city_input, #busquedaBtn, #localidadBtn{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+}
+@media(max-width: 580px){
+    .weather-data .weather-derecha .destacados .indices-aire{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media(max-width: 520px){
+    .weather-data .weather-derecha .destacados{
+        & .carta.card:nth-of-type(3),
+            & .carta.card:nth-of-type(4),
+            & .carta.card:nth-of-type(5),
+            & .carta.card:nth-of-type(6),
+            & .carta.card:nth-of-type(7){
+                grid-column: span 2;
+            }
+            & .indices-aire{
+                grid-template-columns: repeat(3, 1fr);
+            }
+    }
+}
+@media(max-width:480px){
+    .weather-data .weather-derecha .destacados .amanecer-anoche{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:450px){
+    .weather-data .weather-derecha .destacados .hora-pronostico{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width:380px){
+    .weather-data .weather-derecha .destacados .indices-aire{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
