@@ -1,3 +1,0 @@
-Nombre: Eddie
-Celular: 12313
-Categoria: eddy
